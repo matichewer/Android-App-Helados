@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_palito"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:onClick="sumar"
+        android:text="Palito agua"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_bombon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_monto" />
+
+    <Button
+        android:id="@+id/button_bombon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:onClick="sumar"
+        android:text="Bombón"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_cono"
+        app:layout_constraintStart_toEndOf="@+id/button_palito"
+        app:layout_constraintTop_toBottomOf="@+id/editText_monto" />
+
+    <Button
+        android:id="@+id/button_cono"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:onClick="sumar"
+        android:text="Conogelato"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_bombon"
+        app:layout_constraintTop_toBottomOf="@+id/editText_monto" />
+
+    <Button
+        android:id="@+id/button_sumarUno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:onClick="sumar"
+        android:text="+ 1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_setearPrecios"
+        app:layout_constraintEnd_toStartOf="@+id/button_resetear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_mixto"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button_restarUno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:onClick="sumar"
+        android:text="- 1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_setearPrecios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_resetear"
+        app:layout_constraintTop_toBottomOf="@+id/button_mixto"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button_resetear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:onClick="sumar"
+        android:text="= 0"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_setearPrecios"
+        app:layout_constraintEnd_toStartOf="@+id/button_restarUno"
+        app:layout_constraintStart_toEndOf="@+id/button_sumarUno"
+        app:layout_constraintTop_toBottomOf="@+id/button_mixto"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/editText_monto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        android:text="0"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toEndOf="@+id/textView_tituloMonto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_tituloMonto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:shadowColor="#000000"
+        android:text="Monto total:"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_setearPrecios"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="15dp"
+        android:onClick="setearPrecios"
+        android:text="Setear precios"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_paletones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="sumar"
+        android:text="Paletones"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_crocante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_palito" />
+
+    <Button
+        android:id="@+id/button_crocante"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="sumar"
+        android:text="Crocante"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_milkshake"
+        app:layout_constraintStart_toEndOf="@+id/button_paletones"
+        app:layout_constraintTop_toBottomOf="@+id/button_bombon" />
+
+    <Button
+        android:id="@+id/button_milkshake"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="sumar"
+        android:text="Milkshake"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_crocante"
+        app:layout_constraintTop_toBottomOf="@+id/button_cono" />
+
+    <Button
+        android:id="@+id/button_alfajores"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:onClick="sumar"
+        android:text="Alfajores"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_bombomEscoces"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_paletones" />
+
+    <Button
+        android:id="@+id/button_bombomEscoces"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:onClick="sumar"
+        android:text="Bombón Escocés"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_alfajores"
+        app:layout_constraintTop_toBottomOf="@+id/button_crocante" />
+
+    <Button
+        android:id="@+id/button_almendrado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="sumar"
+        android:text="almendrado"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_bombónSuizo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_alfajores" />
+
+    <Button
+        android:id="@+id/button_bombónSuizo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="sumar"
+        android:text="bombón suizo"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_almendrado"
+        app:layout_constraintTop_toBottomOf="@+id/button_bombomEscoces" />
+
+    <Button
+        android:id="@+id/button_tiramisu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="sumar"
+        android:text="Tiramisu"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_mixto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_almendrado" />
+
+    <Button
+        android:id="@+id/button_mixto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="sumar"
+        android:text="Mixto"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_tiramisu"
+        app:layout_constraintTop_toBottomOf="@+id/button_bombónSuizo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
